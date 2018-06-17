@@ -1,0 +1,15 @@
+language: java
+jdk:
+  - oraclejdk7
+  - openjdk7
+sudo: required
+dist: trusty
+addons:
+  chrome: stable
+install: 
+  - wget -N http://chromedriver.storage.googleapis.com/2.39/chromedriver_linux64.zip
+  - unzip -a chromedriver_linux64.zip
+  - rm chromedriver_linux64.zip
+  - mv -f chromedriver driver/.
+script:
+  - mvn clean install

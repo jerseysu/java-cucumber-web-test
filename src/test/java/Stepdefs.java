@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class Stepdefs {
     private static final String WEBDRIVER_CHROME_DRIVER = "webdriver.chrome.driver";
@@ -40,7 +42,13 @@ public class Stepdefs {
     public void beforeScenario(){
         System.out.println("This will run before the Scenario");
         System.setProperty(WEBDRIVER_CHROME_DRIVER, WEBDRIVER_CHROME_DRIVER_PATH);
-        driver = new ChromeDriver();
+
+        final ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--disable-gpu");
+        chromeOptions.setCapability("setJavascriptEnabled", "true");
+
+        driver = new ChromeDriver(chromeOptions);
     }	
 	
 	@After
