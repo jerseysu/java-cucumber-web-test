@@ -1,6 +1,8 @@
 # java-cucumber-web-test
 Sample Project - selenium + cucumber-jvm BDD style test cases
 
+[![Build Status](https://travis-ci.com/jerseysu/java-cucumber-web-test.svg?branch=master)](https://travis-ci.com/jerseysu/java-cucumber-web-test)
+
 ## Requirements
 
 - Java 10.0.1

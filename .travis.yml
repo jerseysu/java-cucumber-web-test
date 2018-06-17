@@ -1,8 +1,8 @@
 language: java
 jdk:
-  - oraclejdk7
-  - openjdk7
+  - oraclejdk8
 sudo: required
+env: JAVADOC=true
 dist: trusty
 addons:
   chrome: stable
