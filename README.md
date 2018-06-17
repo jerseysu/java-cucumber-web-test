@@ -1,5 +1,5 @@
 # java-cucumber-web-test
-Sample Project - selenium + cucumber-jvm BDD style test cases
+Sample Project - selenium 3 + cucumber-jvm 3.0 BDD style test cases
 
 [![Build Status](https://travis-ci.com/jerseysu/java-cucumber-web-test.svg?branch=master)](https://travis-ci.com/jerseysu/java-cucumber-web-test)
 
@@ -38,6 +38,7 @@ $ ./driver/.
 
 ## Useful Sample:
 
+### Scenario Outline
 ```
 Scenario Outline: Searching a keyword
     Given I go to google
@@ -48,6 +49,29 @@ Scenario Outline: Searching a keyword
     | food    |
     | pizza   |
     | ham     |
+```
+
+### Cucumber Expressions
+```
+    @When("I search {string}")
+    public void i_search(String searchKeyword) {
+        System.err.println(String.format("KeyWord: %s", searchKeyword));
+        GoogleLandingPage page = PageFactory.initElements(driver, GoogleLandingPage.class);
+        page.searchFor(searchKeyword);
+    }
+```
+
+### Page Factory
+```
+    public class GoogleLandingPage {
+        @FindBy(how = How.NAME, using = "q")
+        protected WebElement searchBox;
+
+        public void searchFor(String searchKeyword) {
+            searchBox.sendKeys(searchKeyword);
+            searchBox.submit();
+        }
+    }
 ```
 
 ## Execution
