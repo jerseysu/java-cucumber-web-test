@@ -40,9 +40,9 @@ $ ./driver/.
 
 ```
 Scenario Outline: Searching a keyword
-    Given I am on google.com
-    When I search <food>
-    Then I should see results
+    Given I go to google
+    When I search "<food>"
+    Then I should see "<food>"
 
     Examples:
     | food    |
