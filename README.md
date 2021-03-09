@@ -9,7 +9,7 @@ Sample Project - selenium 3 + cucumber-jvm 3.0 BDD style test cases
 - Apache Maven 3.5.3
 - Cucumber-jvm 3.0.0
 - Selenium 3.12.0
-- ChromeDriver 2.39.562713
+- ChromeDriver 2.33
 - Docker (if you wanna run by docker)
 
 ## Installation 
@@ -22,7 +22,7 @@ $ brew cask install java
 $ brew install maven
 
 # Install Chromedriver
-$ version="2.39"
+$ version="2.33"
 $ curl -O  http://chromedriver.storage.googleapis.com/$version/chromedriver_mac64.zip
 $ unzip -a chromedriver_mac64.zip
 $ mv chromedriver driver/.
