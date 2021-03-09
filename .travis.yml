@@ -7,7 +7,7 @@ dist: trusty
 addons:
   chrome: stable
 install: 
-  - wget -N http://chromedriver.storage.googleapis.com/88.0.4324.27/chromedriver_linux64.zip
+  - wget -N http://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip
   - unzip -a chromedriver_linux64.zip
   - rm chromedriver_linux64.zip
   - mv -f chromedriver driver/.
